@@ -41,9 +41,9 @@ app.get('/test',function (req,rest) {
     console.log('headers:', res.headers);
   
     res.on('data', (d) => {
-    process.stdout.write(d.members[0]);
+    process.stdout.write(d);
     
-   //rest.send(JSON.parse(d));
+   rest.send(JSON.parse(d));
   //rest.send(JSON.stringify(d));
     // console.log(JSON.stringify(d));
     });
